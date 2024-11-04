@@ -1,14 +1,10 @@
 services:
   api:
     container_name: api-go
-    image: golang:1.18
+    image: golang:1.23
     volumes:
-      - .:/app/src
+      - .:/go/src
     ports:
       - 3000:3000
     command: tail -f "/dev/null"
-    # develop:
-    #   watch:
-    #     - action: rebuild
-    #       path: ./
-# docker exec -it <ID> bash
+    # docker exec -it <ID> bash
